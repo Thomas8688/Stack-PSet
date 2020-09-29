@@ -86,4 +86,7 @@ myStack2.push("afl.com.au")
 myStack2.push("afl.com.au")
 myStack2.push("afl.com.au")
 myStack2.push("afl.com.au")
+<<<<<<< HEAD
 print("Test")
+=======
+>>>>>>> 016279ca8db263d7d8d2a8ef8a42ddf588ba3fd2
