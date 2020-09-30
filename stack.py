@@ -3,7 +3,7 @@ class stack():
 #Initialisation
     def __init__(self, size):
 #If the input for stack size is not an integer, the size will be defaulted to 10
-        print("\nCreating Stack")
+        print("\nCreating Stack...")
         if isinstance(size, int):
             self.__size = size
         else:
