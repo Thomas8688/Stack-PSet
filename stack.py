@@ -70,7 +70,8 @@ myStack.peek()
 myStack.push("outlook.com")
 #Prints the NEW top value of the stack
 myStack.peek()
-#Error Handling TESTING
+
+#ERROR HANDLING TESTING
 myStack2 = stack("hello")
 myStack2.push(16)
 myStack2.peek()
