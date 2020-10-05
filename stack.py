@@ -19,7 +19,6 @@ class stack():
     def push(self, URL):
         if isinstance(URL, str):
             if not self.isFull():
-                
                 self.__stack.append(URL)
                 self.__head += 1
                 print(URL, "has been Added to the Stack")
