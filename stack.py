@@ -11,6 +11,7 @@ class stack():
             print("Invalid Stack Size: Set to Default (10)")
 #Sets the stack to an empty list
         self.__stack = []
+        self.__head = -1
         print("Stack Created\n")
 
 #Procedure used to add an input URL to the stack
@@ -18,6 +19,7 @@ class stack():
         if isinstance(URL, str):
             if not self.isFull():
                 self.__stack.append(URL)
+                self.__head += 1
                 print(URL, "has been Added to the Stack")
             else:
                 print("Stack is Full: Cannot push", URL)
@@ -29,8 +31,9 @@ class stack():
         if self.isEmpty():
             print("The Stack is Empty: Cannot Pop")
         else:
-            top = self.__stack[-1]
-            self.__stack = self.__stack[:-1]
+            top = self.__stack[self.__head]
+            self.__stack[self.__head] = None
+            self.__head -= 1
             return top
 
 #Function used to print the top item in the stack
@@ -38,7 +41,7 @@ class stack():
         if self.isEmpty():
             print("The Stack is Empty: Cannot Peek")
         else:
-            print("Top of stack:", self.__stack[-1])
+            print("Top of stack:", self.__stack[self.__head])
 
 #Function used to check if the stack is empty
     def isEmpty(self):
