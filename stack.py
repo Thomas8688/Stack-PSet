@@ -1,5 +1,5 @@
 #Class created to implement the stack data structure
-class stack():
+class stack:
 #Initialisation
     def __init__(self, size):
 #If the input for stack size is not an integer, the size will be defaulted to 10
