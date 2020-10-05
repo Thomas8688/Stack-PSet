@@ -11,6 +11,7 @@ class stack():
             print("Invalid Stack Size: Set to Default (10)")
 #Sets the stack to an empty list
         self.__stack = []
+#Sets the head pointer to -1 (Indexing Starts at 0)
         self.__head = -1
         print("Stack Created\n")
 
@@ -18,6 +19,7 @@ class stack():
     def push(self, URL):
         if isinstance(URL, str):
             if not self.isFull():
+                
                 self.__stack.append(URL)
                 self.__head += 1
                 print(URL, "has been Added to the Stack")
