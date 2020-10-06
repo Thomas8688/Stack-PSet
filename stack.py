@@ -10,7 +10,7 @@ class stack:
             self.__size = 10
             print("Invalid Stack Size: Set to Default (10)")
 #Sets the stack to an empty list
-        self.__stack = []
+        self.__stack = ["-" for i in range(self.__size)]
 #Sets the head pointer to -1 (Indexing Starts at 0)
         self.__head = -1
         print("Stack Created\n")
@@ -18,9 +18,9 @@ class stack:
 #Procedure used to add an input URL to the stack
     def push(self, URL):
         if isinstance(URL, str):
+            self.__head += 1
             if not self.isFull():
-                self.__stack.append(URL)
-                self.__head += 1
+                self.__stack[self.__head] = URL
                 print(URL, "has been Added to the Stack")
             else:
                 print("Stack is Full: Cannot push", URL)
@@ -33,7 +33,7 @@ class stack:
             print("The Stack is Empty: Cannot Pop")
         else:
             top = self.__stack[self.__head]
-            self.__stack[self.__head] = None
+            self.__stack[self.__head] = "-"
             self.__head -= 1
             return top
 
@@ -46,14 +46,14 @@ class stack:
 
 #Function used to check if the stack is empty
     def isEmpty(self):
-        if len(self.__stack) == 0:
+        if self.__head == -1:
             return True
         else:
             return False
 
 #Function used to check if the stack is full (Opposite to isFull)
     def isFull(self):
-        if len(self.__stack) == self.__size:
+        if self.__head == self.__size:
             return True
         else:
             return False
